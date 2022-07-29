@@ -6,7 +6,6 @@ import {
   ListItem,
   ListItemIcon,
 } from '@mui/material'
-
 import { MdClose } from 'react-icons/md'
 
 interface Props {

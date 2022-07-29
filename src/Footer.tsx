@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Divider, Link, Stack, Typography } from '@mui/material'
+import { Box, Link, Typography } from '@mui/material'
 import { MdLightbulbOutline } from 'react-icons/md'
 
 const GITHUB_LINK = 'https://github.com/Lifulifu';
@@ -10,6 +10,7 @@ export default function Footer() {
     <Box sx={{
       textAlign: 'center',
       color: 'secondary.main',
+      mb: '1em'
     }}>
       <Typography variant='subtitle1' alignItems='center'>
         <MdLightbulbOutline />Pro tip: Click on an item's text to edit.

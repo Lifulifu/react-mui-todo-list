@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import TodoList from './TodoList';
 import Footer from './Footer';
-
 import {
   ThemeProvider,
   createTheme,

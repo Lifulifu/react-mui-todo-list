@@ -1,16 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import TodoItem from './TodoItem'
 import AddNewTodoItem from './AddNewTodoItem'
 import { getId } from './util'
-
 import {
+  Box,
   Divider,
   List,
   Paper,
   TextField,
   Typography
 } from '@mui/material'
-import { Box } from '@mui/system'
 
 interface TodoItemData {
   id: string,
@@ -70,7 +69,6 @@ export default function TodoList() {
   }
 
   const handleItemTextChange = (targetId: string, targetText: string) => {
-    console.log('text changed')
     const newTodoItems = todoItems
       .map((item): TodoItemData => {
         const { id, text, ...rest } = item;
