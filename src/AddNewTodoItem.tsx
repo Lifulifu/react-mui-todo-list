@@ -38,7 +38,7 @@ export default function AddNewTodoItem({ onFinish }: Props) {
   return (
     <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
       <ListItemIcon>
-        <IconButton onClick={handleAddButtonClicked}>
+        <IconButton onClick={handleAddButtonClicked} data-testid='add-todo-button'>
           <MdAdd />
         </IconButton>
       </ListItemIcon>

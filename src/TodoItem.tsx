@@ -58,14 +58,19 @@ export default function TodoItem({ id, done, text, onStatusChange, onTextChange,
   }
 
   return (
-    <ListItem sx={{
-      display: 'flex',
-      '&:hover': {
-        backgroundColor: '#eeeeee'
-      }
-    }}>
+    <ListItem
+      sx={{
+        display: 'flex',
+        '&:hover': {
+          backgroundColor: '#eeeeee'
+        }
+      }}
+      data-testid='todo-item'>
       <ListItemIcon>
-        <Checkbox checked={done} onChange={handleCheckboxChange} />
+        <Checkbox
+          checked={done}
+          onChange={handleCheckboxChange}
+          name='checkbox' />
       </ListItemIcon>
       <InputBase
         fullWidth
@@ -77,10 +82,12 @@ export default function TodoItem({ id, done, text, onStatusChange, onTextChange,
         sx={{
           flexGrow: 1,
           textDecoration: done ? 'line-through' : 'none'
-        }} />
+        }}
+        name='text'
+      />
       <IconButton onClick={handleDeleteClick}>
         <MdClose />
       </IconButton>
-    </ListItem>
+    </ListItem >
   )
 }

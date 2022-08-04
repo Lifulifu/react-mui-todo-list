@@ -11,33 +11,20 @@ import {
   Typography
 } from '@mui/material'
 
-interface TodoItemData {
+export interface TodoItemData {
   id: string,
   createdAt: Date,
   done: boolean,
   text: string,
 }
 
-const DUMMY_DATA: TodoItemData[] = [
-  { done: false, text: 'Get a job' },
-  { done: false, text: 'Study typescript' },
-  { done: false, text: 'Pet the cat' },
-  { done: false, text: 'Pet the dog' },
-  { done: true, text: 'What da dog do\'in?' },
-]
-  .map(({ done, text }, idx): TodoItemData => {
-    let date = new Date();
-    date.setMilliseconds(date.getMilliseconds() + idx);  // add 1 ms difference to each item for sorting
-    return {
-      done, text,
-      createdAt: date,
-      id: getId(date, text)
-    }
-  })
+interface Props {
+  initialData: TodoItemData[]
+}
 
-export default function TodoList() {
+export default function TodoList({ initialData }: Props) {
 
-  const [todoItems, setTodoItems] = useState<TodoItemData[]>(DUMMY_DATA);
+  const [todoItems, setTodoItems] = useState<TodoItemData[]>(initialData ? initialData : []);
   const [searchStr, setSearchStr] = useState<string>('');
 
   const handleAddNewTodoItem = (text: string) => {
