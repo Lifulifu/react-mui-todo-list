@@ -52,7 +52,7 @@ Components overview:
 ### Testing
 Testings are in the `src/testing/` folder.
 - `ut.test.tsx` tests `<TodoItem/>` and `<AddNewTodoItem/>` functions correctly.
-- `ut.test.tsx` tests the main features of `<TodoList/>`, including:
+- `it.test.tsx` tests the main features of `<TodoList/>`, including:
   - Add todo item
   - Remove todo item
   - Sorting of todo items
