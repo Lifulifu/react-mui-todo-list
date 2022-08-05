@@ -49,9 +49,9 @@ Components overview:
 - The `<TodoList>` component owns a reactive state variable `todoItems` that controls the states of all `<TodoItem>`s ('completed' state, description), and each `<TodoItem>` can change its state by calling the `onStatusChange`, `onTextChange` and `onDelete` callbacks (One-way data flow).
 - All completed and uncompleted items are in a single array, they are sorted so that all uncompleted items are on top of completed ones, a `<Divider/>` is conditionally rendered to seperate the 2 groups visually.
 
-### Testing
+## Testing
 Testings are in the `src/testing/` folder.
-- `ut.test.tsx` tests `<TodoItem/>` and `<AddNewTodoItem/>` functions correctly.
+- `ut.test.tsx` contains unit tests for `<TodoItem/>` and `<AddNewTodoItem/>`.
 - `it.test.tsx` tests the main features of `<TodoList/>`, including:
   - Add todo item
   - Remove todo item
